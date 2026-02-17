@@ -20,7 +20,13 @@
     <link rel="alternate" hreflang="{{.}}" href="?lang={{.}}" />
     {{/languages}}
     <link rel="manifest" href="manifest.json" />
-    <meta name="theme-color" content="#C4DFFF" />
+    <meta name="theme-color" content="#3b82f6" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -39,22 +45,23 @@
     </header>
 
     <main>
-      <div id="description">
+      <section id="description">
         <img
           src="frontpage-illustration.svg"
           alt="Public board illustration"
-          with="700"
-          height="560"
+          width="600"
+          height="480"
         />
         <div class="text">
           <h3>{{translations.index_title}}</h3>
           <p>{{{translations.introduction_paragraph}}}</p>
           <p>{{{translations.share_instructions}}}</p>
         </div>
-      </div>
+      </section>
 
-      <div id="actions">
+      <section id="actions">
         <div>
+          <h3>Public Board</h3>
           <p>{{{translations.public_board_description}}}</p>
           <a href="boards/anonymous" class="wbo-button"
             >{{{translations.open_public_board}}}</a
@@ -62,6 +69,7 @@
         </div>
 
         <div>
+          <h3>Private Board</h3>
           <p>{{{translations.private_board_description}}}</p>
           <a href="random" class="wbo-button"
             >{{{translations.create_private_board}}}</a
@@ -69,6 +77,7 @@
         </div>
 
         <div>
+          <h3>Join Board</h3>
           <p>
             <label for="board"
               >{{{translations.named_private_board_description}}}</label
@@ -89,26 +98,26 @@
         <div id="recent-boards" class="hidden">
           <h3>{{{translations.recent_boards}}}</h3>
         </div>
+      </section>
 
-        <footer>
-          <a
-            href="https://www.instagram.com/wbo_whiteboard/"
-            class="smallink"
-            rel="external"
-            title="Instagram"
-            ><img alt="instagram" src="instagram.svg" width="30" height="30"
-          /></a>
-          <a
-            href="https://github.com/lovasoa/whitebophir"
-            class="smallink"
-            rel="external"
-            title="{{translations.view_source}}"
-            ><img alt="github" src="github.svg" width="30" height="30" />
-          </a>
-        </footer>
-      </div>
+      <footer>
+        <a
+          href="https://www.instagram.com/wbo_whiteboard/"
+          class="smallink"
+          rel="external"
+          title="Instagram"
+          ><img alt="instagram" src="instagram.svg" width="24" height="24"
+        /></a>
+        <a
+          href="https://github.com/lovasoa/whitebophir"
+          class="smallink"
+          rel="external"
+          title="{{translations.view_source}}"
+          ><img alt="github" src="github.svg" width="24" height="24" />
+        </a>
+      </footer>
     </main>
-  </body>
 
-  <script src="../js/index.js" async defer></script>
+    <script src="../js/index.js" async defer></script>
+  </body>
 </html>
